@@ -14,4 +14,12 @@ SRCS=main.c util.c backup.c backup-saturn.c backup-satiator.c backup-cd.c bup_he
 LIBS=mode/mode_intf.a
 JO_ENGINE_SRC_DIR=../../jo_engine
 COMPILER_DIR=../../Compiler
+
+default: all Save-Game-Copier.elf
+
+%.elf: game.elf
+	$(CONV) -O elf32-sh $< temporary.elf
+	$(CONV) temporary.elf --strip-all $@
+	$(RM) temporary.elf
+
 include $(COMPILER_DIR)/COMMON/jo_engine_makefile
