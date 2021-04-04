@@ -1,5 +1,5 @@
 #include "backup-satiator.h"
-#include "satiator/satiator.h"
+#include "libsatiator/satiator.h"
 
 // returns true if the backup device is found
 bool satiatorIsBackupDeviceAvailable(int backupDevice)

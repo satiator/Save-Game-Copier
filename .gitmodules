@@ -1,0 +1,3 @@
+[submodule "libsatiator"]
+	path = libsatiator
+	url = git@github.com:satiator/libsatiator.git
