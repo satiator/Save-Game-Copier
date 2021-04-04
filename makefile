@@ -18,8 +18,7 @@ COMPILER_DIR=../../Compiler
 default: all Save-Game-Copier.elf
 
 %.elf: game.elf
-	$(CONV) -O elf32-sh $< temporary.elf
-	$(CONV) temporary.elf --strip-all $@
-	$(RM) temporary.elf
+	$(CONV) -O elf32-sh $< $@
+	$(CONV) --strip-all $@
 
 include $(COMPILER_DIR)/COMMON/jo_engine_makefile
